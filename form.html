@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 메뉴영역 -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">WebDemo</div>
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="list.html">List</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="table.html">Table</a></li>
+          <li><a href="form.html">Form</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container main">
+      <h1>사용자 등록 페이지</h1>
+
+      <form action="">
+        <fieldset>
+          <legend>기본 정보</legend>
+
+          <p>
+            <label for="userid">아이디:</label><br />
+            <input type="text" id="userid" name="userid" required />
+          </p>
+
+          <p>
+            <label for="pw">비밀번호:</label><br />
+            <input type="password" id="pw" name="pw" required />
+          </p>
+
+          <p>
+            <label for="name">이름:</label><br />
+            <input type="text" id="name" name="name" required />
+          </p>
+
+          <p>
+            <label for="email">이메일:</label><br />
+            <input type="email" id="email" name="email" required />
+          </p>
+
+          <p>
+            <label for="phone">전화번호:</label><br />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="010-1234-5678"
+            />
+          </p>
+
+          <p>
+            <label for="birth">생년월일:</label><br />
+            <input type="date" id="birth" name="birth" />
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>추가 정보</legend>
+
+          <p>성별:</p>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">남자</label>
+
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">여자</label>
+
+          <p style="margin-top: 10px">관심 분야:</p>
+          <input type="checkbox" id="web" name="interest" value="web" />
+          <label for="web">웹</label>
+
+          <input type="checkbox" id="app" name="interest" value="app" />
+          <label for="app">앱</label>
+
+          <input
+            type="checkbox"
+            id="security"
+            name="interest"
+            value="security"
+          />
+          <label for="security">보안</label>
+
+          <p style="margin-top: 10px">
+            <label for="major">전공:</label><br />
+            <select id="major" name="major">
+              <option value="">선택하세요</option>
+              <option value="cs">컴퓨터공학</option>
+              <option value="security">정보보호학과</option>
+              <option value="software">소프트웨어학과</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="intro">자기소개:</label><br />
+            <textarea id="intro" name="intro" rows="5" cols="40"></textarea>
+          </p>
+        </fieldset>
+
+        <p>
+          <input type="submit" value="회원가입" />
+          <input type="reset" value="다시작성" />
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
